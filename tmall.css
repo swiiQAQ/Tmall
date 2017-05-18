@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.Tmall_index_header{
+    width: 100%;
+    background-color: #F2F2F2;
+    height: 30px;
+    border-bottom:1px solid #E5E5E5;
+    color: #A0A0A0;
+}
+.header_left span{
+    padding: 0 10px;
+}
+.header_left_ac:hover{
+    color:#DC2727;
+}
