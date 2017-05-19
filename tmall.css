@@ -2,16 +2,130 @@ body{
     margin: 0;
     padding: 0;
 }
+ul{
+    margin:0;
+}
+li{
+    list-style: none;
+    float: left
+}
 .Tmall_index_header{
     width: 100%;
     background-color: #F2F2F2;
     height: 30px;
     border-bottom:1px solid #E5E5E5;
     color: #A0A0A0;
+    font-size:12px;
+    line-height: 30px;
+    padding: 0 25px;
+    position: relative;
 }
 .header_left span{
     padding: 0 10px;
 }
 .header_left_ac:hover{
     color:#DC2727;
+    cursor: pointer;
+}
+.header_left{
+   
+}
+.header_right{
+    position:absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+}
+.header_right ul{
+    position: absolute;
+    height: 30px;
+    width: 750px;
+    right: 0;
+}
+.header_right li{
+    position: relative;
+    padding: 0 10px;
+}
+.header_right li:hover{
+    color:#DC2727;
+    cursor: pointer;
+}
+.MyTB_sel{
+}
+.triangle{
+    border-width: 3px 3px 0 3px;
+    border-color: #BBBBBB transparent transparent transparent;
+    border-style: solid;
+    position: absolute;
+    right: 5px;
+    top: 15px;;
+}
+
+.MyTB .baby{
+    display: none;
+    position: absolute;
+    width: 95px;
+    line-height: 20px;
+    padding: 8px;
+    left: 6px;
+    top:31px;
+    background: #fff;
+    color: #A0A0A0;
+}
+
+.buyed:hover{
+    color: #DC2727;
+}
+.selled:hover{
+    color: #DC2727;
+}
+.icon{
+    width: 10px;
+    height: 10px;
+    background-size: 10px 10px;
+    display: inline-block;
+}
+.header_right .brand{
+    background-image: url("img/love.png");
+}
+.header_right .cart{
+    background-image: url("img/cart.png");
+}
+.mobile{
+    background-image: url("img/mobile.png");
+    background-size:13px 13px;
+    width: 13px;
+    height: 13px;
+}
+.cart_num{
+    display: inline;
+}
+.bar_gif{
+    float: left
+}
+.top_bar_right{
+    position: relative;
+}
+.search_item{
+    position: relative;
+    left: 50px;
+    top:45px;
+}
+.search_text{
+    border:2px solid #C40000;
+    width: 490px;
+    height: 36px;
+    padding: 5px;
+    float: left;
+    outline: none;
+}
+.search_button{
+    width: 132px;
+    height: 36px;
+    background: #C40000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    border: none;
 }
