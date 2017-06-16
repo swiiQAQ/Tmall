@@ -5,6 +5,7 @@
         <link href="tmall.css" type="text/css" rel="stylesheet">
     </head>
     <body>
+        <div class="page">
         <div class="Tmall_index_header">
             <div class="header_left">
                 <span>喵，欢迎来天猫</span>
@@ -74,9 +75,79 @@
                 <div class="search_item">
                     <input class="search_text" type="text">
                     <input class="search_button" type="button" value="搜索">
+                    <div id="search_words"></div>
                 </div>
-                <div class="search_words"></div>
+                <script id="search_words_tpl" type="text/template">
+                    <div>
+                        <ul class="hotSearch">
+                        <% _.each(data.model.list,function(item){ %>
+                            <%  
+                                if(item.highlight){var className="highLight"}
+                            %>
+                            <li class="<%=className%>">
+                                <%=item.query%>
+                            </li>
+                        <% }) %>
+                        </ul>
+                    </div>
+                </script>
             </div>
         </div>
+        <div class="goodsNav">
+            <div class="naver">
+                <ul class="nav_ban">
+                    <li>
+                        <span>天猫超市</span>
+                        <div class="tinyCat"></div>
+                    </li>
+                    <li>
+                        <span>天猫国际</span>
+                    </li>
+                    <li>
+                        <span>天猫会员</span>
+                    </li>
+                    <li>
+                        <span>品牌街</span>
+                    </li>
+                    <li>
+                        <span>电器城</span>
+                    </li>
+                    <li>
+                        <span>喵鲜生</span>
+                    </li>
+                    <li>
+                        <span>医药馆</span>
+                    </li>
+                    <li><span>营业厅</span></li>
+                    <li><span>魅力惠</span></li>
+                    <li><span>飞猪旅行</span></li>
+                    <li><span>苏宁易购</span></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <script src="js/jquery-1.12.0.min.js"></script>
+        <script src="js/lodash.js"></script>
+        <script>
+            getAx("https://suggest.taobao.com/sug?area=tmall-hq","#search_words");
+
+            function getAx(loadUrl,templateId){
+                $.ajax({
+                    url:loadUrl,
+                    data:'jsonp',
+                    dataType: 'jsonp',
+                    jsonp:'callback',
+                    success:function(result){
+                        renderTemplate(templateId,result)
+                    }
+                })
+            }
+            
+            function renderTemplate(templateId,data){
+                let templateText=$(templateId+"_tpl").text();
+                let template=_.template(templateText,{'variable':'data'});
+                $(templateId).html(template(data));
+            }
+        </script>
     </body>
 </html>
