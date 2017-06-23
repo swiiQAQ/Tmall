@@ -1,0 +1,11 @@
+$scrollImageDiv: scroll_img;
+.#{$scrollImageDiv}{
+    display: none;
+    position: absolute;
+    width: 100%;
+    img{
+        width: 1180px;
+        margin: 0 auto;
+        display: block;
+    }
+}

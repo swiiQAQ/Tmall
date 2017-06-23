@@ -2,7 +2,8 @@
     <head>
         <meta charset="utf-8">
         <title>Tmall</title>
-        <link href="tmall.css" type="text/css" rel="stylesheet">
+        <link href="css/tmall.css" type="text/css" rel="stylesheet">
+        <link href="css/scroll.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <div class="page">
@@ -102,35 +103,69 @@
                     </li>
                     <li>
                         <span>天猫国际</span>
+                        <div class="tinyCat"></div>
                     </li>
                     <li>
                         <span>天猫会员</span>
+                        <div class="tinyCat"></div>
                     </li>
                     <li>
                         <span>品牌街</span>
+                        <div class="tinyCat"></div>
                     </li>
                     <li>
                         <span>电器城</span>
+                        <div class="tinyCat"></div>
                     </li>
                     <li>
                         <span>喵鲜生</span>
+                        <div class="tinyCat"></div>
                     </li>
                     <li>
                         <span>医药馆</span>
+                        <div class="tinyCat"></div>
                     </li>
-                    <li><span>营业厅</span></li>
-                    <li><span>魅力惠</span></li>
-                    <li><span>飞猪旅行</span></li>
-                    <li><span>苏宁易购</span></li>
+                    <li>
+                        <span>营业厅</span>
+                        <div class="tinyCat"></div>
+                    </li>
+                    <li>
+                        <span>魅力惠</span>
+                        <div class="tinyCat"></div>
+                    </li>
+                    <li>
+                        <span>飞猪旅行</span>
+                        <div class="tinyCat"></div>
+                    </li>
+                    <li>
+                        <span>苏宁易购</span>
+                        <div class="tinyCat"></div>
+                    </li>
                 </ul>
             </div>
+        </div>
+        <div id="scroll">
+            <div id="scroll_bar"></div>
+            <script id="scroll_bar_tpl" type="text/template">
+                <div>
+                <%
+                    _.each(data["07055"]["data"],function(item,id){
+                        if(id<3){
+                %>
+                <div class="scroll_img" style="background-color:<%=item.bgColor%>">
+                    <img src="http://<%=item.imgUrl%>">
+                </div>
+                <%}})%>
+                </div>
+            </script>
         </div>
         </div>
         <script src="js/jquery-1.12.0.min.js"></script>
         <script src="js/lodash.js"></script>
         <script>
             getAx("https://suggest.taobao.com/sug?area=tmall-hq","#search_words");
-
+            getAx("https://aldh5.tmall.com/recommend2.htm?&appId=201602265,201602267,07055,201602266,2016030118,09044,201605170,201612221,201606279,2016062710","#scroll_bar");
+            
             function getAx(loadUrl,templateId){
                 $.ajax({
                     url:loadUrl,

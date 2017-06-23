@@ -1,0 +1,8 @@
+.scroll_img {
+  display: none;
+  position: absolute;
+  width: 100%; }
+  .scroll_img img {
+    width: 1180px;
+    margin: 0 auto;
+    display: block; }

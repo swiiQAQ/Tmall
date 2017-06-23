@@ -2,8 +2,9 @@ body{
     margin: 0;
     padding: 0;
 }
-ul{
+ul,li{
     margin:0;
+    padding:0;
 }
 li{
     list-style: none;
@@ -23,6 +24,7 @@ li{
     line-height: 30px;
     padding: 0 25px;
     position: relative;
+    box-sizing: border-box;
 }
 .header_left span{
     padding: 0 10px;
@@ -30,9 +32,6 @@ li{
 .header_left_ac:hover{
     color:#DC2727;
     cursor: pointer;
-}
-.header_left{
-   
 }
 .header_right{
     position:absolute;
@@ -53,8 +52,6 @@ li{
 .header_right li:hover{
     color:#DC2727;
     cursor: pointer;
-}
-.MyTB_sel{
 }
 .triangle{
     border-width: 3px 3px 0 3px;
@@ -177,9 +174,9 @@ ul.hotSearch li:last-child{
 }
 .nav_ban li:hover .tinyCat{
     opacity: 1;
-    transform: translate(0,-15px);
-    -webkit-transform: translate(0,-15px);
-    -moz-transform: translate(0,-15px);
+    transform: translate(0,-10px);
+    -webkit-transform: translate(0,-10px);
+    -moz-transform: translate(0,-10px);
     transition: opacity 0.5s,transform 0.5s ;
     -webkit-transition: opacity 0.5s,-webkit-transform 0.5s;
     -moz-transition: opacity 0.2s,-moz-transform 0.2s;
