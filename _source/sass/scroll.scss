@@ -1,11 +1,44 @@
+$scrollWrapDiv: mall_scroll;
+$scrollOutDiv: scroll_bar;
 $scrollImageDiv: scroll_img;
-.#{$scrollImageDiv}{
-    display: none;
-    position: absolute;
-    width: 100%;
-    img{
-        width: 1180px;
-        margin: 0 auto;
-        display: block;
+$scrollCircle: scroll_circle;
+##{$scrollWrapDiv}{
+    position: relative;
+    ##{$scrollOutDiv}{
+        height: 500px;
+        .#{$scrollImageDiv}{
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 500px;
+            img{
+                width: 1180px;
+                margin: 0 auto;
+                display: block;
+                height: 500px;
+            }
+        }
+        .active{
+            display: block;
+        }
+    }
+    .#{$scrollCircle}{
+        position: absolute;
+        bottom: 20px;
+        width: 128px;
+        height: 30px;
+        left: 50%;
+        margin-left: -64px;
+        ul li{
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            margin: 0 8px
+        }
+        .active{
+            background: #fff;
+            opacity: 0.7;
+        }
     }
 }

@@ -1,12 +1,14 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Tmall</title>
-        <link href="css/tmall.css" type="text/css" rel="stylesheet">
-        <link href="css/scroll.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="page">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tmall</title>
+    <link href="css/tmall.css" type="text/css" rel="stylesheet">
+    <link href="css/scroll.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page">
         <div class="Tmall_index_header">
             <div class="header_left">
                 <span>喵，欢迎来天猫</span>
@@ -35,8 +37,7 @@
                         <i class="cart icon"></i>
                         <div class="cart_num">
                             购物车
-                            <span>0</span>
-                            件
+                            <span>0</span> 件
                         </div>
                     </li>
                     <li>
@@ -60,8 +61,8 @@
                     </li>
                     <li>
                         <div class="MyTB_sel">
-                                <span>商家支持</span>
-                                <span class="triangle"></span>
+                            <span>商家支持</span>
+                            <span class="triangle"></span>
                         </div>
                     </li>
                     <li>
@@ -81,14 +82,14 @@
                 <script id="search_words_tpl" type="text/template">
                     <div>
                         <ul class="hotSearch">
-                        <% _.each(data.model.list,function(item){ %>
-                            <%  
+                            <% _.each(data.model.list,function(item){ %>
+                                <%  
                                 if(item.highlight){var className="highLight"}
                             %>
-                            <li class="<%=className%>">
-                                <%=item.query%>
-                            </li>
-                        <% }) %>
+                                    <li class="<%=className%>">
+                                        <%=item.query%>
+                                    </li>
+                                    <% }) %>
                         </ul>
                     </div>
                 </script>
@@ -144,45 +145,124 @@
                 </ul>
             </div>
         </div>
-        <div id="scroll">
-            <div id="scroll_bar"></div>
-            <script id="scroll_bar_tpl" type="text/template">
-                <div>
-                <%
-                    _.each(data["07055"]["data"],function(item,id){
-                        if(id<3){
-                %>
-                <div class="scroll_img" style="background-color:<%=item.bgColor%>">
-                    <img src="http://<%=item.imgUrl%>">
+        <div class="classify_scroll">
+            <div id="mall_scroll">
+                <div id="scroll_bar">
+                    <div class="scroll_img" style="background:rgb(232, 232, 232);display:block">
+                        <img src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg">
+                    </div>
+                    <div class="scroll_img">
+                        <img src="http://img.alicdn.com/tps/i4/TB10OM3RVXXXXa8XXXXSutbFXXX.jpg">
+                    </div>
+                    <div class="scroll_img" style="background:rgb(255, 54, 134)">
+                        <img src="https://img.alicdn.com/tps/i4/TB1._3sRVXXXXbVXFXXSutbFXXX.jpg_q100.jpg_.webp">
+                    </div>
+                    <div class="scroll_img" style="background:rgb(121, 200, 93)">
+                        <img src="https://img.alicdn.com/imgextra/i2/125/TB2HmEkzdBopuFjSZPcXXc9EpXa_!!125-0-luban.jpg_q100.jpg_.webp">
+                    </div>
                 </div>
-                <%}})%>
+                <div class="scroll_circle">
+                    <ul>
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
-            </script>
+                <div class="pageTurning">
+                    <div class="leftTurn">
+                        
+                    </div>
+                    <div class="rightTurn">
+
+                    </div>
+                </div>
+            </div>
+            <div class="classify_wrap">
+                <div class="ware_classify">
+                    <div class="classify_title">商品分类</div>
+                    <div class="classify_list">
+                        <ul>
+                            <li class="classify_list_item">
+                                女装 /内衣
+                            </li>
+                            <li class="classify_list_item">
+                                男装 /运动户外
+                            </li>
+                            <li class="classify_list_item">
+                                女鞋 /男鞋 /箱包
+                            </li>
+                            <li class="classify_list_item">
+                                化妆品 /个人护理
+                            </li>
+                            <li class="classify_list_item">
+                                腕表 /珠宝饰品 /眼镜
+                            </li>
+                            <li class="classify_list_item">
+                                手机 /数码 /电脑办公
+                            </li>
+                            <li class="classify_list_item">
+                                母婴玩具
+                            </li>
+                            <li class="classify_list_item">
+                                零食 /进口食品 /茶酒
+                            </li>
+                            <li class="classify_list_item">
+                                生鲜水果
+                            </li>
+                            <li class="classify_list_item">
+                                大家电 /生活电器
+                            </li>
+                            <li class="classify_list_item">
+                                家居建材
+                            </li>
+                            <li class="classify_list_item">
+                                汽车 /配件 /用品
+                            </li>
+                            <li class="classify_list_item">
+                                家纺 /家饰 /鲜花
+                            </li>
+                            <li class="classify_list_item">
+                                医药保健
+                            </li>
+                            <li class="classify_list_item">
+                                厨具 /收纳 /宠物
+                            </li>
+                            <li class="classify_list_item">
+                                图书音像
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-        </div>
+
         <script src="js/jquery-1.12.0.min.js"></script>
         <script src="js/lodash.js"></script>
         <script>
-            getAx("https://suggest.taobao.com/sug?area=tmall-hq","#search_words");
-            getAx("https://aldh5.tmall.com/recommend2.htm?&appId=201602265,201602267,07055,201602266,2016030118,09044,201605170,201612221,201606279,2016062710","#scroll_bar");
-            
-            function getAx(loadUrl,templateId){
+            getAx("https://suggest.taobao.com/sug?area=tmall-hq", "#search_words");
+
+            function getAx(loadUrl, templateId) {
                 $.ajax({
-                    url:loadUrl,
-                    data:'jsonp',
+                    url: loadUrl,
+                    data: 'jsonp',
                     dataType: 'jsonp',
-                    jsonp:'callback',
-                    success:function(result){
-                        renderTemplate(templateId,result)
+                    jsonp: 'callback',
+                    success: function (result) {
+                        renderTemplate(templateId, result)
                     }
                 })
             }
-            
-            function renderTemplate(templateId,data){
-                let templateText=$(templateId+"_tpl").text();
-                let template=_.template(templateText,{'variable':'data'});
+
+            function renderTemplate(templateId, data) {
+                let templateText = $(templateId + "_tpl").text();
+                let template = _.template(templateText, { 'variable': 'data' });
                 $(templateId).html(template(data));
             }
         </script>
-    </body>
+        <script src="js/scrollBar.js"></script>
+</body>
+
 </html>
